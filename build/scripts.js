@@ -6,3 +6,15 @@ const toggleMobileNav = () => {
         mobileNav.style.display = "flex";
     }
 }
+
+
+
+const openCheckoutWindow = () =>{
+    const ele = document.getElementById("checkout-window");
+
+    if(ele.style.display === "none"){
+        ele.style.display = "block";
+    }else{
+        ele.style.display = "none";
+    }
+}
