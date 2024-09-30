@@ -170,7 +170,100 @@ const prevImg = () => {
     const ele = document.getElementById("display-img");
     let num = parseInt(ele.src.split('-')[2].split('.')[0]);
     if (num === 1) {
-        num = 4;
+        num = 5;
     }
     ele.src = `../images/image-product-${num - 1}.jpg`
+}
+
+
+
+const achangethumbnail = (a) => {
+    const ele1 = document.getElementById("a-thumbnail1");
+    const ele2 = document.getElementById("a-thumbnail2");
+    const ele3 = document.getElementById("a-thumbnail3");
+    const ele4 = document.getElementById("a-thumbnail4");
+
+    const b1 = document.getElementById("a-thumbnail1-border");
+    const b2 = document.getElementById("a-thumbnail2-border");
+    const b3 = document.getElementById("a-thumbnail3-border");
+    const b4 = document.getElementById("a-thumbnail4-border");
+
+    const display_img = document.getElementById("a-display-img");
+
+    if (a == 1) {
+        ele1.style.opacity = "0.5";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(251 146 60)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-1.jpg'
+    } else if (a == 2) {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "0.5";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(251 146 60)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-2.jpg'
+    } else if (a == 3) {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "0.5";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(251 146 60)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-3.jpg'
+    } else {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "0.5";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(251 146 60)";
+        display_img.src = '../images/image-product-4.jpg'
+    }
+}
+
+
+const anextImg = () => {
+    const ele = document.getElementById("a-display-img");
+    let num = parseInt(ele.src.split('-')[2].split('.')[0]);
+
+    if (num === 4) {
+        num = 0;
+    }
+    ele.src = `../images/image-product-${num + 1}.jpg`;
+    achangethumbnail(num + 1);
+}
+
+const aprevImg = () => {
+    const ele = document.getElementById("a-display-img");
+    let num = parseInt(ele.src.split('-')[2].split('.')[0]);
+    if (num === 1) {
+        num = 5;
+    }
+    ele.src = `../images/image-product-${num - 1}.jpg`;
+    achangethumbnail(num - 1);
+}
+
+const closenopenimg = () => {
+    if (window.innerWidth < 1024) {
+        return;
+    }
+    const ele = document.getElementById("img-display");
+
+    if (ele.style.display == "none") {
+        ele.style.display = "block";
+    } else {
+        ele.style.display = "none";
+    }
 }

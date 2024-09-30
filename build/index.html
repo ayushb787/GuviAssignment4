@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
+<body class="" id="body">
     <header class="flex-row justify-between items-center mt-10 mx-20 hidden lg:flex">
         <div class="flex flex-row items-center ml-20 ">
             <img src="../images/logo.svg" style="margin-left: 1rem; margin-right: 1rem; margin-bottom: 2.5rem;">
@@ -97,14 +98,20 @@
     <section class="flex flex-col justify-center items-center m-auto  lg:flex-row lg:w-4/5 lg:mt-10">
         <div class="flex flex-col justify-center items-center lg:w-1/2 gap-4 relative">
             <div class=" ">
-                <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-1/5 lg:w-96" id="display-img">
-                <button class="bg-white rounded-full absolute top-1/2 right-5 transform -translate-y-1/2"
-                    onclick="nextImg()">
-                    <img src="../images/icon-next.svg" alt="" class="p-3">
+                <button onclick="closenopenimg()" class="">
+                    <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-1/5 lg:w-96"
+                        id="display-img">
                 </button>
-                <button class="bg-white rounded-full absolute top-1/2 left-5 transform -translate-y-1/2"
+                <!-- <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-1/5 lg:hidden" id="display-img-mobile"> -->
+                <button class="bg-white rounded-full absolute top-1/2 right-5 transform -translate-y-1/2  lg:hidden"
+                    onclick="nextImg()">
+                    <i class="fa-solid fa-angle-right text-black p-3 hover:text-orange-400 text-lg font-extrabold"></i>
+                    <!-- <img src="../images/icon-next.svg" alt="" class="p-3"> -->
+                </button>
+                <button class="bg-white rounded-full absolute top-1/2 left-5 transform -translate-y-1/2  lg:hidden"
                     onclick="prevImg()">
-                    <img src="../images/icon-previous.svg" alt="" class="p-3">
+                    <i class="fa-solid fa-angle-left text-black p-3 hover:text-orange-400 text-lg font-extrabold"></i>
+                    <!-- <img src="../images/icon-previous.svg" alt="" class="p-3"> -->
                 </button>
             </div>
             <div class="hidden flex-row justify-center items-center lg:flex gap-4">
@@ -225,6 +232,54 @@
 
     </section>
 
+
+    <section class="fixed top-0 left-0 z-10 bg-black bg-opacity-50 backdrop-blur-sm h-full w-full hidden"
+        id="img-display">
+        <div class="fixed top-1/4 left-1/3">
+            <div class="flex flex-col justify-center items-center h-1/3 gap-2">
+                <div class="relative">
+                    <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-96" id="a-display-img">
+                    <button onclick="closenopenimg()">
+                        <i
+                            class="fa-solid fa-xmark absolute right-1 -top-8 text-black hover:text-orange-400 text-xl"></i>
+                        <!-- <img src="../images/icon-close.svg" class="absolute right-1 -top-8"> -->
+                    </button>
+                    <button class="bg-white rounded-full absolute top-1/2 -right-5 transform -translate-y-1/2"
+                        onclick="anextImg()">
+                        <i class="fa-solid fa-angle-right p-3 hover:text-orange-400 text-lg font-extrabold"></i>
+                        <!-- <img src="../images/icon-next.svg" alt="" class="p-3"> -->
+                    </button>
+                    <button class="bg-white rounded-full absolute top-1/2 -left-5 transform -translate-y-1/2 "
+                        onclick="aprevImg()">
+                        <i class="fa-solid fa-angle-left p-3 hover:text-orange-400 text-lg  font-extrabold"></i>
+                        <!-- <img src="../images/icon-previous.svg" alt="" class="p-3"> -->
+                    </button>
+                </div>
+                <div class="hidden flex-row justify-center items-center lg:flex gap-4">
+                    <button class="border-3 border-orange-400 rounded-xl" onclick="achangethumbnail(1)"
+                        id="a-thumbnail1-border">
+                        <img src="../images/image-product-1-thumbnail.jpg" alt="" class="opacity-50 h-16 rounded-xl"
+                            id="a-thumbnail1">
+                    </button>
+                    <button class="border-3 border-white rounded-xl" onclick="achangethumbnail(2)"
+                        id="a-thumbnail2-border">
+                        <img src="../images/image-product-2-thumbnail.jpg" alt="" class="h-16 rounded-xl"
+                            id="a-thumbnail2">
+                    </button>
+                    <button class="border-3 border-white rounded-xl" onclick="achangethumbnail(3)"
+                        id="a-thumbnail3-border">
+                        <img src="../images/image-product-3-thumbnail.jpg" alt="" class="h-16 rounded-xl"
+                            id="a-thumbnail3">
+                    </button>
+                    <button class="border-3 border-white rounded-xl" onclick="achangethumbnail(4)"
+                        id="a-thumbnail4-border">
+                        <img src="../images/image-product-4-thumbnail.jpg" alt="" class="h-16 rounded-xl"
+                            id="a-thumbnail4">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="scripts.js"> </script>
 </body>
