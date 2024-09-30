@@ -57,6 +57,7 @@ const addToCart = () => {
     document.getElementById("checkout-window").style.display = "block";
 
     toggleCart();
+    updateCartQty();
 }
 
 const deleteItems = () => {
@@ -78,4 +79,98 @@ const toggleCart = () => {
         ele2.style.display = "flex";
         ele1.style.display = "none";
     }
+}
+
+
+const updateCartQty = () => {
+    const ele1 = document.getElementById("cart-qty");
+    const ele2 = document.getElementById("mobile-cart-qty");
+    ele1.innerText = `${selected_qty}`;
+    ele2.innerText = `${selected_qty}`;
+
+    if (selected_qty === 0) {
+        ele1.style.display = "none";
+        ele2.style.display = "none";
+    } else {
+        ele1.style.display = "block";
+        ele2.style.display = "block";
+    }
+}
+
+const changethumbnail = (a) => {
+    const idd = `thumbnail${a}`;
+
+    const ele1 = document.getElementById("thumbnail1");
+    const ele2 = document.getElementById("thumbnail2");
+    const ele3 = document.getElementById("thumbnail3");
+    const ele4 = document.getElementById("thumbnail4");
+
+    const b1 = document.getElementById("thumbnail1-border");
+    const b2 = document.getElementById("thumbnail2-border");
+    const b3 = document.getElementById("thumbnail3-border");
+    const b4 = document.getElementById("thumbnail4-border");
+
+    const display_img = document.getElementById("display-img");
+
+    if (a == 1) {
+        ele1.style.opacity = "0.5";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(251 146 60)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-1.jpg'
+    } else if (a == 2) {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "0.5";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(251 146 60)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-2.jpg'
+    } else if (a == 3) {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "0.5";
+        ele4.style.opacity = "1";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(251 146 60)";
+        b4.style.borderColor = "rgb(255 255 255)";
+        display_img.src = '../images/image-product-3.jpg'
+    } else {
+        ele1.style.opacity = "1";
+        ele2.style.opacity = "1";
+        ele3.style.opacity = "1";
+        ele4.style.opacity = "0.5";
+        b1.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "rgb(251 146 60)";
+        display_img.src = '../images/image-product-4.jpg'
+    }
+}
+
+
+const nextImg = () => {
+    const ele = document.getElementById("display-img");
+    let num = parseInt(ele.src.split('-')[2].split('.')[0]);
+
+    if (num === 4) {
+        num = 0;
+    }
+    ele.src = `../images/image-product-${num + 1}.jpg`
+}
+
+const prevImg = () => {
+    const ele = document.getElementById("display-img");
+    let num = parseInt(ele.src.split('-')[2].split('.')[0]);
+    if (num === 1) {
+        num = 4;
+    }
+    ele.src = `../images/image-product-${num - 1}.jpg`
 }
