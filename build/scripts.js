@@ -121,7 +121,7 @@ const changethumbnail = (a) => {
         b2.style.borderColor = "rgb(255 255 255)";
         b3.style.borderColor = "rgb(255 255 255)";
         b4.style.borderColor = "rgb(255 255 255)";
-        display_img.src = '../images/image-product-1.jpg'
+        display_img.src = 'images/image-product-1.jpg'
     } else if (a == 2) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "0.5";
@@ -131,7 +131,7 @@ const changethumbnail = (a) => {
         b2.style.borderColor = "rgb(251 146 60)";
         b3.style.borderColor = "rgb(255 255 255)";
         b4.style.borderColor = "rgb(255 255 255)";
-        display_img.src = '../images/image-product-2.jpg'
+        display_img.src = 'images/image-product-2.jpg'
     } else if (a == 3) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
@@ -141,7 +141,7 @@ const changethumbnail = (a) => {
         b2.style.borderColor = "rgb(255 255 255)";
         b3.style.borderColor = "rgb(251 146 60)";
         b4.style.borderColor = "rgb(255 255 255)";
-        display_img.src = '../images/image-product-3.jpg'
+        display_img.src = 'images/image-product-3.jpg'
     } else {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
@@ -151,7 +151,7 @@ const changethumbnail = (a) => {
         b2.style.borderColor = "rgb(255 255 255)";
         b3.style.borderColor = "rgb(255 255 255)";
         b4.style.borderColor = "rgb(251 146 60)";
-        display_img.src = '../images/image-product-4.jpg'
+        display_img.src = 'images/image-product-4.jpg'
     }
 }
 
@@ -163,7 +163,7 @@ const nextImg = () => {
     if (num === 4) {
         num = 0;
     }
-    ele.src = `../images/image-product-${num + 1}.jpg`
+    ele.src = `images/image-product-${num + 1}.jpg`
 }
 
 const prevImg = () => {
@@ -172,7 +172,7 @@ const prevImg = () => {
     if (num === 1) {
         num = 5;
     }
-    ele.src = `../images/image-product-${num - 1}.jpg`
+    ele.src = `images/image-product-${num - 1}.jpg`
 }
 
 
@@ -199,7 +199,7 @@ const achangethumbnail = (a) => {
         b2.style.borderColor = "transparent";
         b3.style.borderColor = "transparent";
         b4.style.borderColor = "transparent";
-        display_img.src = '../images/image-product-1.jpg'
+        display_img.src = 'images/image-product-1.jpg'
     } else if (a == 2) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "0.5";
@@ -209,7 +209,7 @@ const achangethumbnail = (a) => {
         b2.style.borderColor = "rgb(251 146 60)";
         b3.style.borderColor = "transparent";
         b4.style.borderColor = "transparent";
-        display_img.src = '../images/image-product-2.jpg'
+        display_img.src = 'images/image-product-2.jpg'
     } else if (a == 3) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
@@ -219,7 +219,7 @@ const achangethumbnail = (a) => {
         b2.style.borderColor = "transparent";
         b3.style.borderColor = "rgb(251 146 60)";
         b4.style.borderColor = "transparent";
-        display_img.src = '../images/image-product-3.jpg'
+        display_img.src = 'images/image-product-3.jpg'
     } else {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
@@ -229,7 +229,7 @@ const achangethumbnail = (a) => {
         b2.style.borderColor = "transparent";
         b3.style.borderColor = "transparent";
         b4.style.borderColor = "rgb(251 146 60)";
-        display_img.src = '../images/image-product-4.jpg'
+        display_img.src = 'images/image-product-4.jpg'
     }
 }
 
@@ -241,7 +241,7 @@ const anextImg = () => {
     if (num === 4) {
         num = 0;
     }
-    ele.src = `../images/image-product-${num + 1}.jpg`;
+    ele.src = `images/image-product-${num + 1}.jpg`;
     achangethumbnail(num + 1);
 }
 
@@ -251,7 +251,7 @@ const aprevImg = () => {
     if (num === 1) {
         num = 5;
     }
-    ele.src = `../images/image-product-${num - 1}.jpg`;
+    ele.src = `images/image-product-${num - 1}.jpg`;
     achangethumbnail(num - 1);
 }
 
