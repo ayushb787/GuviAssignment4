@@ -102,13 +102,16 @@
                     <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-1/5 lg:w-96"
                         id="display-img">
                 </button>
+
                 <!-- <img src="../images/image-product-1.jpg" alt="" class="lg:rounded-xl h-1/5 lg:hidden" id="display-img-mobile"> -->
-                <button class="bg-white rounded-full absolute top-1/2 right-5 transform -translate-y-1/2  lg:hidden"
+
+                <button
+                    class="bg-white rounded-full absolute top-1/2 right-5 transform -translate-y-1/2 px-1  lg:hidden"
                     onclick="nextImg()">
                     <i class="fa-solid fa-angle-right text-black p-3 hover:text-orange-400 text-lg font-extrabold"></i>
                     <!-- <img src="../images/icon-next.svg" alt="" class="p-3"> -->
                 </button>
-                <button class="bg-white rounded-full absolute top-1/2 left-5 transform -translate-y-1/2  lg:hidden"
+                <button class="bg-white rounded-full absolute top-1/2 left-5 transform -translate-y-1/2 px-1  lg:hidden"
                     onclick="prevImg()">
                     <i class="fa-solid fa-angle-left text-black p-3 hover:text-orange-400 text-lg font-extrabold"></i>
                     <!-- <img src="../images/icon-previous.svg" alt="" class="p-3"> -->
@@ -174,7 +177,7 @@
 
 
     <section id="checkout-window"
-        class="absolute top-20 items-center w-full lg:w-auto lg:top-20 lg:right-10 bg-white  rounded-md shadow-2xl p-5 hidden">
+        class="absolute top-20 items-center w-[calc(100%-0.5rem)] lg:w-auto lg:top-20 lg:right-10 bg-white rounded-md shadow-2xl p-5 hidden m-1">
         <div id="checkout-window-product" class="hidden flex-col justify-center items-start gap-4">
             <div class="text-black text-xl font-bold flex justify-between items-center w-full">
                 <div>
@@ -188,13 +191,13 @@
             <hr class="text-slate-600 w-full">
 
             <div class="flex flex-row justify-center items-center gap-4">
-                <img src="../images/image-product-1-thumbnail.jpg" class="h-12 rounded-lg">
+                <img src="../images/image-product-1-thumbnail.jpg" class="h-14 rounded-lg">
                 <div class="flex flex-col justify-center items-start">
-                    <div class="text-slate-600 text-sm lg:text-lg">
+                    <div class="text-slate-600 text-lg">
                         Fall Limited Edition Sneakers
                     </div>
                     <div class="flex flex-row justify-start items-center gap-4">
-                        <div class="text-slate-600  text-sm lg:text-lg" id="price-and-qty">
+                        <div class="text-slate-600 text-lg" id="price-and-qty">
                             $125.00 x 0
                         </div>
                         <div class="text-black font-bold text-sm lg:text-lg" id="total">
@@ -208,12 +211,12 @@
                 </button>
             </div>
 
-            <button class="bg-orange-400 text-black text-xl font-bold p-5 rounded-lg w-full">
+            <button class="bg-orange-400 text-black text-xl font-bold p-3 rounded-lg w-full">
                 Checkout
             </button>
         </div>
 
-        <div id="checkout-window-product-empty" class="flex flex-col justify-center items-start gap-4">
+        <div id="checkout-window-product-empty" class="flex flex-col justify-center items-center gap-4">
             <div class="text-black text-xl font-bold flex justify-between items-center w-full">
                 <div>
                     Cart
@@ -244,12 +247,12 @@
                             class="fa-solid fa-xmark absolute right-1 -top-8 text-black hover:text-orange-400 text-xl"></i>
                         <!-- <img src="../images/icon-close.svg" class="absolute right-1 -top-8"> -->
                     </button>
-                    <button class="bg-white rounded-full absolute top-1/2 -right-5 transform -translate-y-1/2"
+                    <button class="bg-white rounded-full absolute top-1/2 -right-5 transform -translate-y-1/2 px-1"
                         onclick="anextImg()">
                         <i class="fa-solid fa-angle-right p-3 hover:text-orange-400 text-lg font-extrabold"></i>
                         <!-- <img src="../images/icon-next.svg" alt="" class="p-3"> -->
                     </button>
-                    <button class="bg-white rounded-full absolute top-1/2 -left-5 transform -translate-y-1/2 "
+                    <button class="bg-white rounded-full absolute top-1/2 -left-5 transform -translate-y-1/2 px-1 "
                         onclick="aprevImg()">
                         <i class="fa-solid fa-angle-left p-3 hover:text-orange-400 text-lg  font-extrabold"></i>
                         <!-- <img src="../images/icon-previous.svg" alt="" class="p-3"> -->
