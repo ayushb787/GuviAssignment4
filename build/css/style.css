@@ -578,6 +578,10 @@ video {
   top: -2rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -588,6 +592,10 @@ video {
 
 .left-5 {
   left: 1.25rem;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-1 {
@@ -622,8 +630,8 @@ video {
   z-index: 20;
 }
 
-.m-3 {
-  margin: 0.75rem;
+.m-1 {
+  margin: 0.25rem;
 }
 
 .m-5 {
@@ -632,14 +640,6 @@ video {
 
 .m-auto {
   margin: auto;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
-.m-1 {
-  margin: 0.25rem;
 }
 
 .mx-2 {
@@ -712,13 +712,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.line-clamp-5 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-}
-
 .flex {
   display: flex;
 }
@@ -771,10 +764,6 @@ video {
   height: 100%;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -791,42 +780,12 @@ video {
   width: 1.5rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-max {
-  width: -moz-max-content;
-  width: max-content;
-}
-
 .w-\[calc\(100\%-0\.5rem\)\] {
   width: calc(100% - 0.5rem);
 }
 
-.w-2 {
-  width: 0.5rem;
-}
-
-.min-w-max {
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-
-.min-w-full {
-  min-width: 100%;
-}
-
-.max-w-px {
-  max-width: 1px;
-}
-
-.max-w-full {
-  max-width: 100%;
+.w-full {
+  width: 100%;
 }
 
 .-translate-y-1\/2 {
@@ -894,26 +853,8 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
-.rounded-s-full {
-  border-start-start-radius: 9999px;
-  border-end-start-radius: 9999px;
-}
-
-.rounded-r-full {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-}
-
 .border-2 {
   border-width: 2px;
-}
-
-.border-4 {
-  border-width: 4px;
 }
 
 .border-b-2 {
@@ -929,13 +870,13 @@ video {
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-black {
@@ -973,10 +914,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .px-1 {
