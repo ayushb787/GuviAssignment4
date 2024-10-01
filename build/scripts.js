@@ -196,38 +196,38 @@ const achangethumbnail = (a) => {
         ele3.style.opacity = "1";
         ele4.style.opacity = "1";
         b1.style.borderColor = "rgb(251 146 60)";
-        b2.style.borderColor = "rgb(255 255 255)";
-        b3.style.borderColor = "rgb(255 255 255)";
-        b4.style.borderColor = "rgb(255 255 255)";
+        b2.style.borderColor = "transparent";
+        b3.style.borderColor = "transparent";
+        b4.style.borderColor = "transparent";
         display_img.src = '../images/image-product-1.jpg'
     } else if (a == 2) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "0.5";
         ele3.style.opacity = "1";
         ele4.style.opacity = "1";
-        b1.style.borderColor = "rgb(255 255 255)";
+        b1.style.borderColor = "transparent";
         b2.style.borderColor = "rgb(251 146 60)";
-        b3.style.borderColor = "rgb(255 255 255)";
-        b4.style.borderColor = "rgb(255 255 255)";
+        b3.style.borderColor = "transparent";
+        b4.style.borderColor = "transparent";
         display_img.src = '../images/image-product-2.jpg'
     } else if (a == 3) {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
         ele3.style.opacity = "0.5";
         ele4.style.opacity = "1";
-        b1.style.borderColor = "rgb(255 255 255)";
-        b2.style.borderColor = "rgb(255 255 255)";
+        b1.style.borderColor = "transparent";
+        b2.style.borderColor = "transparent";
         b3.style.borderColor = "rgb(251 146 60)";
-        b4.style.borderColor = "rgb(255 255 255)";
+        b4.style.borderColor = "transparent";
         display_img.src = '../images/image-product-3.jpg'
     } else {
         ele1.style.opacity = "1";
         ele2.style.opacity = "1";
         ele3.style.opacity = "1";
         ele4.style.opacity = "0.5";
-        b1.style.borderColor = "rgb(255 255 255)";
-        b2.style.borderColor = "rgb(255 255 255)";
-        b3.style.borderColor = "rgb(255 255 255)";
+        b1.style.borderColor = "transparent";
+        b2.style.borderColor = "transparent";
+        b3.style.borderColor = "transparent";
         b4.style.borderColor = "rgb(251 146 60)";
         display_img.src = '../images/image-product-4.jpg'
     }
